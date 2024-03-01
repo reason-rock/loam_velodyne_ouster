@@ -161,7 +161,7 @@ Visualization Manager:
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: camera_init
+    Fixed Frame: /camera_init
     Frame Rate: 30
   Name: root
   Tools:
@@ -182,7 +182,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/ThirdPersonFollower
-      Distance: 162.362
+      Distance: 75
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
@@ -194,10 +194,10 @@ Visualization Manager:
         Z: 0
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: -1.5698
+      Pitch: 0.0902027
       Target Frame: aft_mapped
       Value: ThirdPersonFollower (rviz)
-      Yaw: 4.29039
+      Yaw: 3.04538
     Saved: ~
 Window Geometry:
   Displays:
