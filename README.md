@@ -1,19 +1,14 @@
-# loam_velodyne
+# loam_velodyne_ouster
+## loam_velodyne - With Ouster LIDAR
 
-![Screenshot](/capture.bmp)
-Sample map built from [nsh_indoor_outdoor.bag](http://www.frc.ri.cmu.edu/~jizhang03/Datasets/nsh_indoor_outdoor.bag) (opened with [ccViewer](http://www.danielgm.net/cc/))
-
-:white_check_mark: Tested with ROS Indigo and Velodyne VLP16. [(Screencast)](https://youtu.be/o1cLXY-Es54)
-
-All sources were taken from [ROS documentation](http://docs.ros.org/indigo/api/loam_velodyne/html/files.html)
-
-Ask questions [here](https://github.com/laboshinl/loam_velodyne/issues/3).
-
+loam_velodyne_ouster is and modified version of [loam_velodyne](https://github.com/laboshinl/loam_velodyne), which uses Ouster LIDAR instead of velodyne.<br>
+This code has been fixed by a junior developer, which could cause unexpected problems. (It works fine in my environment at this point.)<br>
+If you ask for a pull request in case of a problem, we will actively reflect it.
 ## How to build with catkin
 
 ```
 $ cd ~/catkin_ws/src/
-$ git clone https://github.com/laboshinl/loam_velodyne.git
+$ git clone https://github.com/reason-rock/loam_velodyne_ouster.git
 $ cd ~/catkin_ws
 $ catkin_make -DCMAKE_BUILD_TYPE=Release 
 $ source ~/catkin_ws/devel/setup.bash
@@ -22,17 +17,13 @@ $ source ~/catkin_ws/devel/setup.bash
 ## Running
 
 ```
-roslaunch loam_velodyne loam_velodyne.launch
+roslaunch loam_velodyne loam_ouster.launch
 ```
 
-In second terminal play sample velodyne data from [VLP16 rosbag](http://www.frc.ri.cmu.edu/~jizhang03/Datasets/):
-```
-rosbag play ~/Downloads/velodyne.bag 
-```
+In second terminal Prepare Data of OS1-32
 
-Or read from velodyne [VLP16 sample pcap](https://midas3.kitware.com/midas/folder/12979):
 ```
-roslaunch velodyne_pointcloud VLP16_points.launch pcap:="$HOME/Downloads/velodyne.pcap"
+rosbag play YOUR_DATASET_FOLDER/YOUR_BAGFILE
 ```
 
 ## Troubleshooting
